@@ -1,0 +1,19 @@
+server:
+  port: 80
+spring:
+  application:
+    name: luke-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+          lower-case-service-id: true #使用小写服务名，默认是大写
+    nacos:
+      discovery:
+        server-addr: localhost:8000 #Nacos地址
+      config:
+        server-addr: localhost:8000 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+        group: LUKE_SERVICE
+        namespace: 5fde7ce8-1d9e-454d-ad77-fac8d0be56c0

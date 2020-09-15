@@ -1,0 +1,14 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: luke-system
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8000 #Nacos地址
+      config:
+        server-addr: localhost:8000 #Nacos地址
+        file-extension: yaml #这里我们获取的yaml格式的配置
+        group: LUKE_SERVICE
+        namespace: 5fde7ce8-1d9e-454d-ad77-fac8d0be56c0
